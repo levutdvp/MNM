@@ -28,7 +28,16 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 	Page<Book> findByCategoryIdAndTitleContainingOrderByCreatedAtDesc(Long categoryId, String keyword,
 			Pageable pageable);
 
-	
+	Page<Book> findByTitleContainingOrderByCreatedAtAsc(String title, Pageable pageable);
 
+	Page<Book> findByTitleContainingOrderByCreatedAtDesc(String title, Pageable pageable);
+
+	Page<Book> findByTitleContainingOrderBySalePriceAsc(String title, Pageable pageable);
+
+	Page<Book> findByTitleContainingOrderBySalePriceDesc(String title, Pageable pageable);
+
+	List<Book> findTop4ByOrderByBuyCountAsc();
+
+	List<Book> findByOrderByCreatedAtDesc();
 
 }
