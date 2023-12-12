@@ -122,6 +122,7 @@ public class AdminBookController extends BaseController {
         redirectAttributes.addFlashAttribute("message", "Xoá sách thành công!");
 
         return "redirect:/admin/books_management";
+dasfhhjkadsfj
     }
 
 }
